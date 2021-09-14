@@ -12,7 +12,7 @@
             var what = window.location.search;
             var data = "";
             if (what == "?Vita"){
-                var xhr = new XmlHttpRequest();
+                var xhr = new XMLHttpRequest();
                 xhr.open("GET", "/Vita.pdf")
                 xhr.onload = function (){
                     data = utf8_to_b64(xhr.responseText);
