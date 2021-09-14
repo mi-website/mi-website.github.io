@@ -16,7 +16,7 @@
                 xhr.open("GET", "/Vita.pdf")
                 xhr.onload = function (){
                     data = utf8_to_b64(xhr.responseText);
-                    document.getElementsByTagName("embed")[0].src = "data:application/pdf;base64,"+utf8_to_b64(data);
+                    document.getElementsByTagName("iframe")[0].src = "data:application/pdf;base64,"+utf8_to_b64(data);
                 }
                 xhr.send()
             }
