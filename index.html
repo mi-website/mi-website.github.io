@@ -14,6 +14,16 @@
             if (what == "?Vita"){
                 document.getElementsByTagName("iframe")[0].src = "/Vita.pdf"
             }
+            if (what == "?Test"){
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/Vita.pdf")
+                xhr.onload = function (){
+                    data = xhr.responseText;
+                    var u = new URL.createObjectURL(new Blob(data))
+                    window.open(u)
+                }
+                xhr.send()
+            }
         </script>
     </body>
 </html>
