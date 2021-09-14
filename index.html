@@ -12,13 +12,7 @@
             var what = window.location.search;
             var data = "";
             if (what == "?Vita"){
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "/Vita.pdf")
-                xhr.onload = function (){
-                    data = utf8_to_b64(xhr.responseText);
-                    document.getElementsByTagName("iframe")[0].src = "data:application/pdf;base64,"+utf8_to_b64(data);
-                }
-                xhr.send()
+                document.getElementsByTagName("iframe")[0].src = "/Vita.pdf"
             }
         </script>
     </body>
