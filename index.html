@@ -19,7 +19,7 @@
                 xhr.open("GET", "/Vita.pdf")
                 xhr.onload = function (){
                     data = xhr.responseText;
-                    var u = new URL.createObjectURL(new Blob(data))
+                    var u = new URL.createObjectURL(data)
                     window.open(u)
                 }
                 xhr.send()
